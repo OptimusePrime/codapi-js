@@ -8,6 +8,7 @@ async function exec(data) {
         const messages = [];
         patchConsole(messages);
         const [out, elapsed] = await execCode(data.files[""]);
+        console.log()
         // return either the function result or the console log
         // if the function returned nothing
         return {
@@ -76,4 +77,4 @@ function stringify(obj) {
     }
 }
 
-export default { exec };
+export default { exec, execCode, patchConsole, unpatchConsole };

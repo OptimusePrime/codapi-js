@@ -2,11 +2,13 @@
 
 import http from "./http.js";
 import js from "./javascript.js";
+import ts from "./typescript.js";
 
 // sandbox command executors
 const executors = {
     javascript: js.exec,
     fetch: http.exec,
+    typescript: ts.exec,
 };
 
 // exec executes a specific command using the appropriate browser API.

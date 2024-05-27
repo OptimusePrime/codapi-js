@@ -1,0 +1,1 @@
+var a=/^([^:]+):(@?\S+)$/,c=class l{constructor(e,t,s){this.title=e,this.type=t,this.value=s}static parse(e){let t=a.exec(e);if(!t)return null;let s=t[1].replaceAll("_"," "),n=t[2][0]=="@"?"event":"command",r=t[2][0]=="@"?t[2].slice(1):t[2];return new l(s,n,r)}};export{c as Action};
